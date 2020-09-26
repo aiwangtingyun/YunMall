@@ -1,0 +1,44 @@
+package com.wang.yunmall.product.entity;
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
+import java.io.Serializable;
+import java.util.Date;
+import lombok.Data;
+
+/**
+ * 品牌分类关联
+ * 
+ * @author 王廷云
+ * @email wty1793172997@163.com
+ * @date 2020-09-26 12:04:15
+ */
+@Data
+@TableName("pms_category_brand")
+public class CategoryBrandEntity implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * 
+	 */
+	@TableId
+	private Long id;
+	/**
+	 * 品牌id
+	 */
+	private Long brandId;
+	/**
+	 * 分类id
+	 */
+	private Long categoryId;
+	/**
+	 * 品牌名称
+	 */
+	private String brandName;
+	/**
+	 * 分类名称
+	 */
+	private String categoryName;
+
+}
