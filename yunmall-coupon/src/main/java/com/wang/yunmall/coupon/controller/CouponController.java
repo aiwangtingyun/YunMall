@@ -1,53 +1,59 @@
-package com.wang.yunmall.member.controller;
+package com.wang.yunmall.coupon.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
-import com.wang.yunmall.member.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wang.yunmall.member.entity.UserEntity;
-import com.wang.yunmall.member.service.UserService;
+import com.wang.yunmall.coupon.entity.CouponEntity;
+import com.wang.yunmall.coupon.service.CouponService;
 import com.wang.common.utils.PageUtils;
 import com.wang.common.utils.R;
 
 
 
 /**
- * 用户表
+ * 优惠券信息
  *
  * @author 王廷云
  * @email wty1793172997@163.com
- * @date 2020-09-26 15:57:46
+ * @date 2020-09-26 20:54:03
  */
+@RefreshScope
 @RestController
-@RequestMapping("member/user")
-public class UserController {
+@RequestMapping("coupon/coupon")
+public class CouponController {
     @Autowired
-    private UserService userService;
+    private CouponService couponService;
 
-    @Autowired
-    private CouponFeignService couponFeignService;
+    @Value("${coupon.user.name}")
+    private String name;
+
+    @Value("${coupon.user.age}")
+    private Integer age;
 
     // 测试
-    @RequestMapping("/test")
+    @RequestMapping("test")
     public R test() {
-        return couponFeignService.test();
+        return R.ok().put("name", name).put("age", age);
     }
 
     /**
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("member:user:list")
+    //@RequiresPermissions("coupon:coupon:list")
     public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = userService.queryPage(params);
+        PageUtils page = couponService.queryPage(params);
 
         return R.ok().put("page", page);
     }
@@ -57,20 +63,20 @@ public class UserController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("member:user:info")
+    //@RequiresPermissions("coupon:coupon:info")
     public R info(@PathVariable("id") Long id){
-		UserEntity user = userService.getById(id);
+		CouponEntity coupon = couponService.getById(id);
 
-        return R.ok().put("user", user);
+        return R.ok().put("coupon", coupon);
     }
 
     /**
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("member:user:save")
-    public R save(@RequestBody UserEntity user){
-		userService.save(user);
+    //@RequiresPermissions("coupon:coupon:save")
+    public R save(@RequestBody CouponEntity coupon){
+		couponService.save(coupon);
 
         return R.ok();
     }
@@ -79,9 +85,9 @@ public class UserController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("member:user:update")
-    public R update(@RequestBody UserEntity user){
-		userService.updateById(user);
+    //@RequiresPermissions("coupon:coupon:update")
+    public R update(@RequestBody CouponEntity coupon){
+		couponService.updateById(coupon);
 
         return R.ok();
     }
@@ -90,9 +96,9 @@ public class UserController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("member:user:delete")
+    //@RequiresPermissions("coupon:coupon:delete")
     public R delete(@RequestBody Long[] ids){
-		userService.removeByIds(Arrays.asList(ids));
+		couponService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

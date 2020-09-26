@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: yunmall-coupon
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.56.10:8848

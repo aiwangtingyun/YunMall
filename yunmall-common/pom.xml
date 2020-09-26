@@ -80,17 +80,17 @@
             <version>1.2.15</version>
         </dependency>
 
-        <!-- 服务注册/发现 -->
-        <!--<dependency>
+        <!-- 引入 Nacos 服务注册/发现依赖 -->
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>-->
+        </dependency>
 
-        <!-- 配置中心来做配置管理 -->
-        <!--<dependency>
+        <!-- 使用 Nacos 配置中心来做配置管理 -->
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>-->
+        </dependency>
 
         <!--<dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -119,7 +119,6 @@
     </dependencies>
 
     <dependencyManagement>
-
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -129,6 +128,7 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- 配置 SpringCloud Alibaba 依赖版本 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
