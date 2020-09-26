@@ -13,6 +13,8 @@ File Encoding         : 65001
 Date: 2020-05-12 22:03:50
 */
 
+-- oms：order micro service 订单微服务数据库
+
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`yunmall_oms` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 USE `yunmall_oms`;

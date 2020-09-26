@@ -11,12 +11,14 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>yunmall-common</module>
         <module>yunmall-product</module>
         <module>yunmall-member</module>
         <module>yunmall-order</module>
         <module>yunmall-coupon</module>
         <module>yunmall-ware</module>
         <module>renren-fast</module>
+        <module>renren-generator</module>
     </modules>
 
 </project>

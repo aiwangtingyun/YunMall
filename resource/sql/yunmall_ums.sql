@@ -13,6 +13,8 @@ File Encoding         : 65001
 Date: 2020-05-12 22:04:26
 */
 
+-- ums：user micro service 用户微服务数据库
+
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`yunmall_ums` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 USE `yunmall_ums`;

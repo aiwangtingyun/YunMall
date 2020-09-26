@@ -22,6 +22,8 @@ Renren-Fast 提供的管理功能包括以下模块：
 * 定时任务日志管理
 * 普通用户管理
 
+Renren-Fast 在 `renren-fast/src/main/java/io/renren/common` 目录下还提供了各种工具类，其中包含了 `renren-generator` 项目生成的代码锁需要的工具依赖。
+
 启动 `renren-fast`之前我们需要修改 application.yml 配置文件，并根据使用的环境 dev、prod、test 修改对应 yaml 文件。
 
 比如，在 dev 环境下我们需要修改 application.yml 文件中的数据库地址、用户名和密码等配置信息。项目中我们 renren-fast 后台管理系统使用的是 yunmall_admin 数据库，所以我们需要正确填写该数据库名称。

@@ -13,6 +13,8 @@ File Encoding         : 65001
 Date: 2020-05-12 22:04:34
 */
 
+-- wms：ware micro service 仓储微服务数据库
+
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`yunmall_wms` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 USE `yunmall_wms`;
