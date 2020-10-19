@@ -17,6 +17,7 @@
         <module>yunmall-order</module>
         <module>yunmall-coupon</module>
         <module>yunmall-ware</module>
+        <module>yunmall-gateway</module>
         <module>renren-fast</module>
         <module>renren-generator</module>
     </modules>

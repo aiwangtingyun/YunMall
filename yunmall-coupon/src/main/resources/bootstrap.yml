@@ -1,7 +1,21 @@
-spring:
-  application:
-    name: yunmall-coupon
-  cloud:
-    nacos:
-      config:
-        server-addr: 192.168.56.10:8848
+#spring:
+#  # 设置应用服务名称
+#  application:
+#    name: yunmall-coupon
+#  # 设置 cloud 组件配置
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: 192.168.56.10:8848 # Nacos 配置中心地址
+#        namespace: e3c73300-b99c-4fd7-a63d-24a906b4605c # 指定使用哪个命名空间
+#        group: 618  # 指定使用命名空间下的哪个分组配置
+#        ext-config:
+#          - data-id: datasource.properties
+#            group: 618
+#            refresh: true
+#          - data-id: mybatis.properties
+#            group: 618
+#            refresh: true
+#          - data-id: other.properties
+#            group: 618
+#            refresh: true

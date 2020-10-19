@@ -203,6 +203,25 @@ INSERT INTO `sys_menu`(`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `
 INSERT INTO `sys_menu`(`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES (29, 1, '系统日志', 'sys/log', 'sys:log:list', 1, 'log', 7);
 INSERT INTO `sys_menu`(`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES (30, 1, '文件上传', 'oss/oss', 'sys:oss:all', 1, 'oss', 6);
 
+INSERT INTO `sys_menu` VALUES ('31', '0', '商品管理', '', '', '0', 'zonghe', '0');
+INSERT INTO `sys_menu` VALUES ('32', '0', '优惠营销', '', '', '0', 'mudedi', '0');
+INSERT INTO `sys_menu` VALUES ('33', '0', '库存管理', '', '', '0', 'shouye', '0');
+INSERT INTO `sys_menu` VALUES ('34', '0', '订单管理', '', '', '0', 'log', '0');
+INSERT INTO `sys_menu` VALUES ('35', '0', '物流管理', '', '', '0', 'oss', '0');
+INSERT INTO `sys_menu` VALUES ('36', '0', '内容管理', '', '', '0', 'editor', '0');
+INSERT INTO `sys_menu` VALUES ('37', '31', '分类维护', '/pms/category/list', 'pms:category:list', '1', 'menu', '0');
+INSERT INTO `sys_menu` VALUES ('38', '31', '商品列表', '/pms/spu/list', 'pms:spu:list', '1', 'tubiao', '0');
+INSERT INTO `sys_menu` VALUES ('39', '31', '品牌管理', '/pms/brand/list', 'pms:brand:list', '1', 'tubiao', '0');
+INSERT INTO `sys_menu` VALUES ('40', '31', '属性维护', '/pms/attr/list', 'pms:attr:list', '1', 'tubiao', '0');
+INSERT INTO `sys_menu` VALUES ('41', '0', '用户管理', '', '', '0', 'admin', '0');
+INSERT INTO `sys_menu` VALUES ('42', '32', '优惠卷', '/sms/coupon/list', 'sms:coupon:list', '1', 'log', '0');
+INSERT INTO `sys_menu` VALUES ('43', '32', '秒杀活动', '/sms/seckill/list', 'sms:seckill:list', '1', 'log', '0');
+INSERT INTO `sys_menu` VALUES ('44', '32', '优惠券领取历史', '/sms/coupon/coupon-history', 'sms:coupon:history', '1', 'log', '0');
+INSERT INTO `sys_menu` VALUES ('45', '32', '商品折扣', '/sms/spu/discount', '', '1', 'log', '0');
+INSERT INTO `sys_menu` VALUES ('46', '33', '仓库信息', '/wms/wareinfo/list', 'wms:wareinfo:list', '1', 'log', '0');
+INSERT INTO `sys_menu` VALUES ('47', '33', '库存工作单', '/wms/task/list', 'wms:task:list', '1', 'log', '0');
+INSERT INTO `sys_menu` VALUES ('48', '33', '商品库存', '/wms/sku/list', 'wms:sku:list', '1', 'log', '0');
+
 INSERT INTO `sys_config` (`param_key`, `param_value`, `status`, `remark`) VALUES ('CLOUD_STORAGE_CONFIG_KEY', '{\"aliyunAccessKeyId\":\"\",\"aliyunAccessKeySecret\":\"\",\"aliyunBucketName\":\"\",\"aliyunDomain\":\"\",\"aliyunEndPoint\":\"\",\"aliyunPrefix\":\"\",\"qcloudBucketName\":\"\",\"qcloudDomain\":\"\",\"qcloudPrefix\":\"\",\"qcloudSecretId\":\"\",\"qcloudSecretKey\":\"\",\"qiniuAccessKey\":\"NrgMfABZxWLo5B-YYSjoE8-AZ1EISdi1Z3ubLOeZ\",\"qiniuBucketName\":\"ios-app\",\"qiniuDomain\":\"http://7xqbwh.dl1.z0.glb.clouddn.com\",\"qiniuPrefix\":\"upload\",\"qiniuSecretKey\":\"uIwJHevMRWU0VLxFvgy0tAcOdGqasdtVlJkdy6vV\",\"type\":1}', '0', '云存储配置信息');
 INSERT INTO `schedule_job` (`bean_name`, `params`, `cron_expression`, `status`, `remark`, `create_time`) VALUES ('testTask', 'renren', '0 0/30 * * * ?', '0', '参数测试', now());
 

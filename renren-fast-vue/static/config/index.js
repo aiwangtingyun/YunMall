@@ -4,8 +4,8 @@
 ;(function () {
   window.SITE_CONFIG = {};
 
-  // api接口请求地址
-  window.SITE_CONFIG['baseUrl'] = 'http://localhost:8080/renren-fast';
+  // api接口请求地址：转发到 gateway 网关中进行处理
+  window.SITE_CONFIG['baseUrl'] = 'http://localhost:88/api';
 
   // cdn地址 = 域名 + 版本号
   window.SITE_CONFIG['domain']  = './'; // 域名
